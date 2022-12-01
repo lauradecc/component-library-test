@@ -20,4 +20,6 @@ interface SeverityPillProps {
 }
 declare const SeverityPill: FC<SeverityPillProps>;
 
-export { Pato, SeverityPill };
+declare const Nutria: FC;
+
+export { Nutria, Pato, SeverityPill };
