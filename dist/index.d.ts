@@ -2,6 +2,8 @@ import { FC, ReactNode } from 'react';
 import { Theme } from '@mui/material';
 import { SxProps } from '@mui/system';
 
+declare const ProgressBar: FC;
+
 declare const Pato: FC;
 
 type SeverityPillColor = 'primary' | 'secondary' | 'error' | 'info' | 'warning' | 'success';
@@ -30,7 +32,5 @@ interface ProgressPointerProps {
     currentStep: number;
 }
 declare const ProgressPointer: FC<ProgressPointerProps>;
-
-declare const ProgressBar: FC;
 
 export { MarketingCard, Nutria, Pato, ProgressBar, ProgressPointer, SeverityPill };
