@@ -30,15 +30,6 @@ export const ProgressBar: FC<ProgressBarProps> = ({ steps, currentStep, setIsCom
   }, [currentStep]);
 
   return (
-    // <SettingsConsumer>
-    //   {({ settings }) => (
-    //     <ThemeProvider
-    //       theme={createTheme({
-    //         direction: settings.direction,
-    //         responsiveFontSizes: settings.responsiveFontSizes,
-    //         mode: settings.theme
-    //       })}
-    //     >
     <Theme>
       <Box
         style={{
@@ -61,8 +52,5 @@ export const ProgressBar: FC<ProgressBarProps> = ({ steps, currentStep, setIsCom
         </Box>
       </Box>
     </Theme>
-    //     </ThemeProvider>
-    //   )}
-    // </SettingsConsumer>
   );
 };
