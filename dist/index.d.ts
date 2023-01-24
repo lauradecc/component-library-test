@@ -2,8 +2,6 @@ import { FC, ReactNode } from 'react';
 import { Theme } from '@mui/material';
 import { SxProps } from '@mui/system';
 
-declare const ProgressBar: FC;
-
 declare const Pato: FC;
 
 type SeverityPillColor = 'primary' | 'secondary' | 'error' | 'info' | 'warning' | 'success';
@@ -32,5 +30,16 @@ interface ProgressPointerProps {
     currentStep: number;
 }
 declare const ProgressPointer: FC<ProgressPointerProps>;
+
+interface ProgressStep {
+    number: number;
+    text: string;
+}
+interface ProgressBarProps {
+    steps: ProgressStep[];
+    currentStep: number;
+    setIsCompleted: (isCompleted: boolean) => void;
+}
+declare const ProgressBar: FC<ProgressBarProps>;
 
 export { MarketingCard, Nutria, Pato, ProgressBar, ProgressPointer, SeverityPill };
