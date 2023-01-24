@@ -22,4 +22,6 @@ declare const SeverityPill: FC<SeverityPillProps>;
 
 declare const Nutria: FC;
 
-export { Nutria, Pato, SeverityPill };
+declare const MarketingCard: FC;
+
+export { MarketingCard, Nutria, Pato, SeverityPill };
