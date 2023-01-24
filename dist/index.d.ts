@@ -24,4 +24,22 @@ declare const Nutria: FC;
 
 declare const MarketingCard: FC;
 
-export { MarketingCard, Nutria, Pato, SeverityPill };
+interface ProgressPointerProps {
+    number: number;
+    text: string;
+    currentStep: number;
+}
+declare const ProgressPointer: FC<ProgressPointerProps>;
+
+interface ProgressStep {
+    number: number;
+    text: string;
+}
+interface ProgressBarProps {
+    steps: ProgressStep[];
+    currentStep: number;
+    setIsCompleted: (isCompleted: boolean) => void;
+}
+declare const ProgressBar: FC<ProgressBarProps>;
+
+export { MarketingCard, Nutria, Pato, ProgressBar, ProgressPointer, SeverityPill };
