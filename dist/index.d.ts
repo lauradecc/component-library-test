@@ -31,15 +31,6 @@ interface ProgressPointerProps {
 }
 declare const ProgressPointer: FC<ProgressPointerProps>;
 
-interface ProgressStep {
-    number: number;
-    text: string;
-}
-interface ProgressBarProps {
-    steps: ProgressStep[];
-    currentStep: number;
-    setIsCompleted: (isCompleted: boolean) => void;
-}
-declare const ProgressBar: FC<ProgressBarProps>;
+declare const ProgressBar: FC;
 
 export { MarketingCard, Nutria, Pato, ProgressBar, ProgressPointer, SeverityPill };
