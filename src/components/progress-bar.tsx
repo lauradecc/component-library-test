@@ -1,5 +1,6 @@
-import { Box, LinearProgress } from '@mui/material';
+import { Box, LinearProgress, ThemeProvider } from '@mui/material';
 import { FC, useEffect } from 'react';
+import { createTheme } from '../theme';
 import { ProgressPointer } from './progress-pointer';
 
 interface ProgressStep {
@@ -29,25 +30,33 @@ export const ProgressBar: FC<ProgressBarProps> = ({ steps, currentStep, setIsCom
   }, [currentStep]);
 
   return (
-    <Box
-      style={{
-        position: 'relative'
-      }}
+    <ThemeProvider
+      theme={createTheme({
+        // direction: settings.direction,
+        // responsiveFontSizes: settings.responsiveFontSizes,
+        mode: 'light'
+      })}
     >
-      <Box display={'flex'} justifyContent="space-evenly">
-        {steps.map((step, index) => (
-          <ProgressPointer currentStep={currentStep} number={step.number} text={step.text} key={index} />
-        ))}
-      </Box>
       <Box
         style={{
-          position: 'absolute',
-          zIndex: -1,
-          width: '100%'
+          position: 'relative'
         }}
       >
-        <LinearProgress variant="buffer" color="primary" value={calculateFillBar()} sx={{ top: -13 }} />
+        <Box display={'flex'} justifyContent="space-evenly">
+          {steps.map((step, index) => (
+            <ProgressPointer currentStep={currentStep} number={step.number} text={step.text} key={index} />
+          ))}
+        </Box>
+        <Box
+          style={{
+            position: 'absolute',
+            zIndex: -1,
+            width: '100%'
+          }}
+        >
+          <LinearProgress variant="buffer" color="primary" value={calculateFillBar()} sx={{ top: -13 }} />
+        </Box>
       </Box>
-    </Box>
+    </ThemeProvider>
   );
 };
