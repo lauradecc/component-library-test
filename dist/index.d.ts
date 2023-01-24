@@ -4,6 +4,8 @@ import { SxProps } from '@mui/system';
 
 declare const Pato: FC;
 
+declare const Nutria: FC;
+
 type SeverityPillColor = 'primary' | 'secondary' | 'error' | 'info' | 'warning' | 'success';
 type SeverityPillSize = 'extraSmall' | 'small' | 'medium' | 'mediumSemi' | 'mediumNarrow' | 'mediumNarrowLong' | 'mediumNarrowLonger' | 'mediumLarge' | 'large';
 type SeverityPillType = true | false;
@@ -19,8 +21,6 @@ interface SeverityPillProps {
     margin?: number;
 }
 declare const SeverityPill: FC<SeverityPillProps>;
-
-declare const Nutria: FC;
 
 declare const MarketingCard: FC;
 

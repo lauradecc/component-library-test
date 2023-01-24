@@ -109,27 +109,27 @@ export const SeverityPill: FC<SeverityPillProps> = (props) => {
 
   return (
     <Theme>
-      icon ? (
-      <SeverityPillRoot ownerState={ownerState} {...other}>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          {left ? (
-            <>
-              {icon}
-              <Box sx={{ ml: margin || 0 }}>{children}</Box>
-            </>
-          ) : (
-            <>
-              <Box sx={{ mr: 1 }}>{children}</Box>
-              {icon}
-            </>
-          )}
-        </Box>
-      </SeverityPillRoot>
+      {icon ? (
+        <SeverityPillRoot ownerState={ownerState} {...other}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            {left ? (
+              <>
+                {icon}
+                <Box sx={{ ml: margin || 0 }}>{children}</Box>
+              </>
+            ) : (
+              <>
+                <Box sx={{ mr: 1 }}>{children}</Box>
+                {icon}
+              </>
+            )}
+          </Box>
+        </SeverityPillRoot>
       ) : (
-      <SeverityPillRoot ownerState={ownerState} {...other}>
-        {children}
-      </SeverityPillRoot>
-      );
+        <SeverityPillRoot ownerState={ownerState} {...other}>
+          {children}
+        </SeverityPillRoot>
+      )}
     </Theme>
   );
 };
