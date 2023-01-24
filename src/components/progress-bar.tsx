@@ -1,6 +1,6 @@
 import { Box, LinearProgress } from '@mui/material';
 import { FC, useEffect } from 'react';
-import { ProgressPointer } from './ProgressPointer';
+import { ProgressPointer } from './progress-pointer';
 
 interface ProgressStep {
   number: number;

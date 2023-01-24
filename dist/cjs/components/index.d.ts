@@ -2,5 +2,5 @@ export * from './pato';
 export * from './severity-pill';
 export * from './nutria';
 export * from './marketing-card';
-export * from './ProgressPointer';
-export * from './ProgressBar';
+export * from './progress-pointer';
+export * from './progress-bar';
