@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from 'react';
-import { Theme } from '@mui/material';
+import { Theme as muiTheme } from '@mui/material';
 import type { SxProps } from '@mui/system';
 type SeverityPillColor = 'primary' | 'secondary' | 'error' | 'info' | 'warning' | 'success';
 type SeverityPillSize = 'extraSmall' | 'small' | 'medium' | 'mediumSemi' | 'mediumNarrow' | 'mediumNarrowLong' | 'mediumNarrowLonger' | 'mediumLarge' | 'large';
@@ -8,7 +8,7 @@ interface SeverityPillProps {
     children?: ReactNode;
     color?: SeverityPillColor;
     style?: {};
-    sx?: SxProps<Theme>;
+    sx?: SxProps<muiTheme>;
     size?: SeverityPillSize;
     isTag?: SeverityPillType;
     icon?: JSX.Element;
